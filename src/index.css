@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  cursor: none;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.948);
+  overflow-y: hidden;
+}
+
+.Emojis_Elems {
+  pointer-events: none;
+}
