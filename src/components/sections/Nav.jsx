@@ -5,7 +5,7 @@ import CustomButton from '../common/CustomButton'
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
+        <nav className="w-full fixed top-0 left-0 z-[999] bg-transparent">
             <div className="mx-auto max-w-[130rem] px-8 py-4 flex items-center justify-between text-white">
 
                 {/* Logo */}

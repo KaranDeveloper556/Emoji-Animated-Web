@@ -11,6 +11,7 @@
 body {
   background: rgb(35, 35, 35);
   overflow-y: hidden;
+  color: white;
 }
 
 .Emojis_Elems {
