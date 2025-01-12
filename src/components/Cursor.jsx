@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Mouse from "../assets/Mouse-gestures/mouse.png"
 
 const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -34,24 +33,24 @@ const Cursor = () => {
       window.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(rafId);
     };
-  }, [isVisible]);
+  }, [isVisible, setIsVisible]);
 
   return (
     <motion.div
       className={`fixed w-[6rem] h-[6rem] rounded-full pointer-events-none z-[9999] ${isVisible ? 'visible' : 'hidden'
         }`}
       animate={{
-        x: mousePosition.x - 50,
-        y: mousePosition.y - 16,
-        opacity: isVisible ? 1 : 0,
+        x: mousePosition.x - 7,
+        y: mousePosition.y - 5,
+        scale: isVisible ? 1 : 0,
       }}
       transition={{
         type: 'spring',
         damping: 50,
-        stiffness: 700,
+        stiffness: 800,
       }}
     >
-      <img src={Mouse} alt="arrow" className='w-full h-full object-fill' />
+      <div className="circle bg-black h-4 w-4 rounded-full"></div>
     </motion.div>
   );
 };

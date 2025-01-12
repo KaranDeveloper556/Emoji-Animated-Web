@@ -5,6 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Landing from './pages/Landing';
 
 const App = () => {
+
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
@@ -15,16 +16,13 @@ const App = () => {
       if (scroll) scroll.destroy();
     };
   }, []);
+
   return (
-    <main className='relative w-full min-h-screen'>
+    <>
       <Cursor />
-      <EmojiWeb />
+      {/* <EmojiWeb /> */}
       <Landing />
-      <Landing />
-      <Landing />
-      <Landing />
-      <Landing />
-    </main>
+    </>
   )
 }
 
