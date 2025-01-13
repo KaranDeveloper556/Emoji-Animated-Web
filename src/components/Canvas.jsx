@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Frames from '../assets/frames/images';
 
 const Canvas = ({ details }) => {
-    const { startIndex, endIndex, duration, size, top, left, zIndex } = details;
+    const { startIndex, endIndex, duration, size, top, left, zIndex, scrollSpeed } = details;
     const [currentIndex, setCurrentIndex] = useState(startIndex);
     const canvasRef = useRef(null);
     const gsapRef = useRef(null);
@@ -53,15 +53,15 @@ const Canvas = ({ details }) => {
         <canvas
             data-scroll
             data-scroll-section
-            data-scroll-speed={(Math.random() * 2)-1}
+            data-scroll-speed={scrollSpeed}
             ref={canvasRef}
             id="Emoji_Elem"
             className="Emojis_Elems absolute"
             style={{
                 width: `${size + 10}px`,
                 height: `${size + 10}px`,
-                top: `${top}%`,
-                left: `${left}%`,
+                top: `${top}dvh`,
+                left: `${left}dvw`,
                 zIndex: zIndex,
             }}
         ></canvas>

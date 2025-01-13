@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import EmojiWeb from './pages/EmojiWeb'
 import Cursor from './components/Cursor'
 import LocomotiveScroll from 'locomotive-scroll';
 import Landing from './pages/Landing';
@@ -21,7 +20,6 @@ const App = () => {
   return (
     <>
       <Cursor />
-      {/* <EmojiWeb /> */}
       <Nav />
       <main className='mx-auto pt-[5rem] max-w-[100rem] overflow-x-hidden'>
         <Landing />
