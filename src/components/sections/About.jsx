@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-   <section className="about_section bg-slate-500 min-h-[200rem]">
+   <section className="about_section relative bg-transparent min-h-[200rem] overflow-x-hidden z-[98]">
     About
    </section>
   )

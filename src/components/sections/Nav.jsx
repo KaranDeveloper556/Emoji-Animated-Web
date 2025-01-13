@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../../assets/web-images/logo.png"
+import logo from "../../assets/logo.png"
 import CustomButton from '../common/CustomButton'
 
 const Nav = () => {

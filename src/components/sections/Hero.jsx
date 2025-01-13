@@ -13,10 +13,10 @@ const Hero = () => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        const frameCount = 151; // Still 151 frames total
-        const currentFrame = (index) => Frames[index + 171]; // Offset by 171 to use frames 171-321
-        
-        canvas.width = 800;
+        const frameCount = 121;
+        const currentFrame = (index) => Frames[index + 1090];
+
+        canvas.width = 1000;
         canvas.height = 800;
 
         const images = [];
@@ -28,7 +28,7 @@ const Hero = () => {
             images.push(img);
         }
 
-        images[0].onload = function() {
+        images[0].onload = function () {
             ctx.drawImage(images[0], 0, 0, canvas.width, canvas.height);
         }
 
@@ -40,7 +40,7 @@ const Hero = () => {
         ScrollTrigger.create({
             trigger: '.Hero_section',
             start: '-80px top',
-            end: '700vh center',
+            end: '1500vh center', // Increased scroll length
             onUpdate: (self) => {
                 const frameIndex = Math.min(
                     frameCount - 1,
@@ -60,29 +60,32 @@ const Hero = () => {
                 scrollTrigger: {
                     trigger: '.Hero_section',
                     start: '-80px top',
-                    end: '900rem center',
+                    end: '1550vh center',
                     scrub: 1,
                     pin: true,
-                    markers: true,
+                    pinSpacing: true,
                 }
             });
 
             tl.to(['.hero-univ', '.hero-lang'], {
                 x: (i) => i === 0 ? -1250 : 1200,
+                duration: 5, // Increased duration
                 opacity: 0
             })
                 .to(['.playfull-element', '.hero-para'], {
                     opacity: 0,
+                    duration: 3 // Added duration
                 }, "<")
                 .fromTo('.canvas-wrapper canvas', {
+                    y: 100,
                     opacity: 0.4,
                     scale: 1,
                     zIndex: 9,
                 }, {
                     opacity: 1,
-                    scale: 1.5,
-                    duration: 2,
-                    zIndex: 9999,
+                    scale: 2,
+                    duration: 4,
+                    zIndex: 99,
                     ease: "power2.inOut"
                 }, "<");
         }
@@ -101,9 +104,9 @@ const Hero = () => {
                     <div className="hero-lang text-[14rem] leading-none font-extrabold">Language</div>
                 </div>
             </div>
-            <div className="illustration h-full w-dvh max-w-[100rem]">
+            <div className="illustration relative h-full w-dvh max-w-[100rem] ">
                 <div className="canvas-wrapper relative w-full h-full flex justify-center items-center">
-                    <canvas ref={canvasRef} className="mx-auto relative w-[40rem]" />
+                    <canvas ref={canvasRef} className="mx-auto relative w-[30rem] rounded-3xl" />
                 </div>
             </div>
         </section>
