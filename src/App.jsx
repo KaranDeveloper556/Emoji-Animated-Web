@@ -21,7 +21,7 @@ const App = () => {
     <>
       <Cursor />
       <Nav />
-      <main className='mx-auto pt-[5rem] max-w-[100rem] overflow-x-hidden'>
+      <main className='mx-auto pt-[5rem]'>
         <Landing />
       </main>
     </>

@@ -2,17 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'DisplayFont';
+  src: url('./assets/Fonts/SofiaBlack.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SansSerif';
+  src: url('./assets/Fonts/SofiaRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DisplayBold';
+  src: url('./assets/Fonts/SofiaBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0px;
   padding: 0px;
-  cursor: none;
 }
 
 body {
   background: rgb(0, 0, 0);
   overflow-y: hidden;
   color: white;
+  margin: auto;
 }
+
 
 .Emojis_Elems {
   pointer-events: none;
