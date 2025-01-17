@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import EmojisDisplay from "../EmojisDisplay";
@@ -40,10 +40,10 @@ const About = () => {
   return (
     <section className="about_section relative bg-transparent font-SansSerif w-full z-[98]">
       <EmojisDisplay />
-      <div className="about_section relative py-[60rem] overflow-hidden">
+      <div className="about_section relative pt-[60rem] pb-[10rem] overflow-hidden">
         <div
           ref={containerRef}
-          className="about-content relative mx-auto flex justify-center items-center font-DisplayBold text-[5rem] max-w-[70rem] text-center font-bold leading-relaxed flex-wrap"
+          className="about-content relative mx-auto flex justify-center items-center font-SansSerif text-[5rem] max-w-[70rem] text-center leading-relaxed flex-wrap"
         >
           {words.map((word, index) => (
             <span
