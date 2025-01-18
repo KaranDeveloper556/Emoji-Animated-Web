@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react'
 import HeroImg from '../../assets/web-images/hero-img.jpeg'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import Frames from '../../assets/frames/images'
+import Frames from "../../assets/frames/images"
 import { useEffect, useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -14,7 +14,7 @@ const Hero = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         const frameCount = 121;
-        const currentFrame = (index) => Frames[index + 1090];
+        const currentFrame = (index) => Frames[index + (Frames.length - 121)];
 
         canvas.width = 1000;
         canvas.height = 800;
