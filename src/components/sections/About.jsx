@@ -31,8 +31,7 @@ const About = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "10% 60%",
-        end: "90% top",
-        markers: true
+        end: "90% top"
       }
     });
   }, []);

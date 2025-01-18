@@ -50,7 +50,7 @@ const Cursor = () => {
         stiffness: 800,
       }}
     >
-      <div className="circle bg-white h-[2rem] w-[2rem] rounded-full"></div>
+      <div className="circle bg-white h-[1rem] w-[1rem] rounded-full"></div>
     </motion.div>
   );
 };
